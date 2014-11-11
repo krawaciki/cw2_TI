@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css">
+		<!-- Date: 2014-10-24 -->
+		<script src="jquery-1.11.1.js"></script>
+    	<script src="skrypt.js"></script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="menu.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<table id="menu">
+    			<tr> 
+    				<td><a href="index.html"><img src="logo.png" class="logo" /></a></td>
+    				<td><div><a href="wstep.html" class="link">WSTĘP</a></div></td>
+    				<td><div><a href="analizy.html" class="link">ANALIZY PRZESTRZENNE</a></div></td>
+    				<td><div><a class="galeria">GALERIA</a></div></td>
+    				<td><div><a class="info">INFO</a></div></td>
+    			</tr>
+			</table>
+		</div>
+		<div id="header_mini">
+			<div class="menu">
+				<dl id="menu1">
+					<dt><a href="index.html"><img src="logo.png" class="logo" /></a></dt>
+					<dd><a href="wstep.html" class="link">WSTĘP</a></dd>
+					<dd><a href="analizy.html" class="link">ANALIZY PRZESTRZENNE</a></dd>
+					<dd><a class="galeria">GALERIA</a></dd>
+					<dd><a class="info">INFO</a></dd>
+				</dl>
+				<script type="text/javascript">
+				// <![CDATA[
+				new Menu('menu1', 'position: absolute', true, true, -1, -1, -1, -1, true);
+				// ]]>
+				</script>
+			</div>
+		</div>
+		<div id="middle1">
+			<h1 class="naglowek1">Przestrzenne analizy danych</h1>
+			<p class="akapit">Systemy informacji przestrzennej umożliwiają uzyskanie informacji, która nie jest widoczna bezpośrednio 
+				na podstawie zbiorów danych źródłowych np. rozpoznanie na mapie obszarów najlepiej nadających się do lokalizacji nowych 
+				osiedli. Do jej uzyskania służą analizy danych przestrzennych. Wynik ich działania umożliwia zrozumienie zjawisk 
+				zachodzących w przestrzeni oraz występujących między nimi zależności. Pozwalają na określenie relacji zachodzą 
+				między pojedynczymi obiektem lub grupami obiektów. W zależności od modelu danych, stanowiących przedmiot rozważania, 
+				stosuje się odmienne funkcje i operatory w analizach przestrzennych - typowe dla modelu wektorowego lub rastrowego.</p>
+			<hr />
+			<h2 class="naglowek">Analizy przestrzenne – wektorowy model danych</h2>
+			<p class="akapit">Analizy wektorowe przeprowadzane są na danych o charakterze wektorowym. Do ich przeprowadzania stosuje 
+				się kilka algorytmów analitycznych. Można zaliczyć do nich analizy sieciowe, operacje buforowania czy operacje sumowania, 
+				odejmowania i wyszukiwania części wspólnej oraz zapytania SQL korzystające z operatorów przestrzennych. Dane przestrzenne 
+				oraz atrybuty opisowe pozwalają na wybranie obiektów o określonych własnościach. W przypadku, gdy zapytanie dotyczy jedynie 
+				samych danych opisowych to określa się je mianem zapytań atrybutowych. Natomiast, jeśli występuje dodatkowo element przestrzenny 
+				np. odległość, wtedy mówi się o tzw. zapytaniach atrybutowo-przestrzennych. Operatory przestrzenne najpowszechniej stosowane 
+				do przeprowadzania zapytań SQL to: operator zawierania (contain), operator zawierania się (are contained by, within) i operator 
+				przecięcia (intersect).</p> 
+			<hr />
+			<h2 class="naglowek">Analizy przestrzenne – rastrowy model danych</h2>
+			<p class="akapit">Analizy rastrowe wykonywane są na danych rastrowych. Umiejscowienie rastra w przestrzeni jest możliwe dzięki 
+				przypisaniu współrzędnych jednemu z jego punktów oraz założeniu, że boki komórki są równoległe do osi układu. Wśród funkcji 
+				analizy rastrowej można wyszczególnić funkcje lokalne, funkcje sąsiedztwa, funkcje strefowe, funkcje globalne oraz funkcje konwersji.</p>
+			<h3 class="naglowek">Funkcje lokalne</h3>	
+			<p class="akapit"><span class="pogrub">Funkcje lokalne</span> (<span class="obce">Local functions</span>) wykonują działania na pojedynczych pikselach, co oznacza, że dowolny piksel nie może 
+				zostać wykorzystany do działań z innym pikselem tego samego rastra, a jedynie z odpowiadającym pikselem innego rastra. W obrębie rastra 
+				nie występują zależności między komórkami. Wśród funkcji tych można wyróżnić: reklasyfikację, crosstabulację, statystykę czy algebrę map. </p>
+			<h3 class="naglowek">Funkcje sąsiedztwa</h3>	
+			<p class="akapit"><span class="pogrub">Funkcje sąsiedztwa</span> (<span class="obce">Focal functions</span>) przeprowadzają operacje odbywające się w ramach jednego rastra. Działania przeprowadzane 
+				w ramach tych funkcji obejmują grupy pikseli znajdujących się w sąsiedztwie. Do podstawowych funkcji należą tutaj: statystyka i grupowanie.</p>
+			<h3 class="naglowek">Funkcje strefowe </h3>	
+			<p class="akapit"><span class="pogrub">Funkcje strefowe</span> (<span class="obce">Zonal functions</span>) realizują działania na podzbiorach komórek, o jednakowym identyfikatorze, zwanych strefami. 
+				Piksele nie muszą stykać się ze sobą. Dlatego jako szczególną grupę stref można zakwalifikować grupy komórek. Niezbędny do przeprowadzenia 
+				funkcji strefowych element stanowi warstwa rastrowa przechowująca strefy tzw. mapa stref pozwalająca określić numerację oraz zbiór 
+				komórek wszystkich stref. Wyniki ich działania stanowią podzbiory komórek zgodnych z mapą stref. Można wyróżnić tutaj: statystyki 
+				strefowe, oraz geometrię strefową.</p>
+			<h3 class="naglowek">Funkcje globalne</h3>	
+			<p class="akapit"><span class="pogrub">Funkcje globalne</span> (<span class="obce">Global functions</span>) przeprowadzają działania prowadzące do uzyskania rastrów złożonych z komórek, 
+				których wartość określona została na podstawie wszystkich komórek rastra. W funkcjach tych występują komórki nie posiadające 
+				żadnej wartości (NoData) oraz te posiadające pewną wartość, nazywane komórkami źródłowymi. Najważniejszych funkcje tej grupy 
+				to dystans i alokacja.</p>
+			<h3 class="naglowek">Funkcje konwersji</h3>	
+			<p class="akapit"><span class="pogrub">Funkcje konwersji</span> powodują zmianę modelu danych, w jakim one są zapisane. W zawiązku z tym, że w trakcie przeprowadzania 
+				analiz przestrzennych wykorzystuje się dane zapisane w różnych formatach, niekiedy niezbędne staje się przeprowadzenie konwersji danych 
+				z postaci rastrowej na wektorową lub odwrotnie. Do podstawowych funkcji konwersji możemy zaliczyć:
+				<ul>
+				<li>konwersję obiektu do pliku rastrowego (Feature to Raster),</li>
+				<li>konwersję rastra do obiektów punktowych (Raster to Point),</li>
+				<li>konwersję rastra do obiektów liniowych (Raster to Polyline),</li>
+				<li>konwersja rastra do obiektów powierzchniowych (Raster to Polygon).</li>
+				</ul>
+				<p class="akapit">Funkcje zamiany danych wektorowych na rastrowe pozwalają na wybór parametrów mapy wynikowej. Istnieje możliwość ustawienia takich cech jak: typ wartości 
+				komórki (integer lub float), wielkości piksela, sposób przypisania wartości w przypadku, gdy w komórce znajduje się więcej niż jeden obiekt.</p>
+		</div>
+		<div id="footer1">
+			<p>Copyright © 2014 Tomasz Krawczyk</p>
+		</div>
+	</body>
+</html>
+

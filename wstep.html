@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<!-- Date: 2014-10-24 -->
+		<script src="jquery-1.11.1.js"></script>
+    	<script src="skrypt.js"></script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="menu.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<table id="menu">
+    			<tr> 
+    				<td><a href="index.html"><img src="logo.png" class="logo" /></a></td>
+    				<td><div><a href="wstep.html" class="link">WSTĘP</a></div></td>
+    				<td><div><a href="analizy.html" class="link">ANALIZY PRZESTRZENNE</a></div></td>
+    				<td><div><a class="galeria">GALERIA</a></div></td>
+    				<td><div><a class="info">INFO</a></div></td>
+    			</tr>
+			</table>
+		</div>
+		<div id="header_mini">
+			<div class="menu">
+				<dl id="menu1">
+					<dt><a href="index.html"><img src="logo.png" class="logo" /></a></dt>
+					<dd><a href="wstep.html" class="link">WSTĘP</a></dd>
+					<dd><a href="analizy.html" class="link">ANALIZY PRZESTRZENNE</a></dd>
+					<dd><a class="galeria">GALERIA</a></dd>
+					<dd><a class="info">INFO</a></dd>
+				</dl>
+				<script type="text/javascript">
+				// <![CDATA[
+				new Menu('menu1', 'position: absolute', true, true, -1, -1, -1, -1, true);
+				// ]]>
+				</script>
+			</div>
+		</div>
+		<div id="middle1">
+			<h1 class="naglowek1">Wstęp</h1>
+			<p class="akapit">Według jednej z definicji systemem informacji przestrzennej (SIP) nazywa się system pozyskiwania, 
+				przetwarzania i udostępniania danych zawierających informacje przestrzenne oraz towarzyszące 
+				im informacje opisowe o obiektach wyróżnionych w części przestrzeni objętej działaniem systemu. 
+				Dane zawarte w systemach GIS utożsamiane z danymi geograficznymi, zazwyczaj kojarzone są wyłącznie 
+				z atrybutami przestrzennymi. Pozwalają one na określenie takich parametrów jak lokalizacja, kształt 
+				geometryczny, wielkość obiektów oraz ich wzajemnych relacji przestrzennych. Jednak z przedstawionej 
+				definicji wynika, że oprócz danych przestrzennych każdemu obiektowi świata rzeczywistego można 
+				przypisać dane opisowe definiujące ich właściwości i wzajemne relacje nieprzestrzenne. Podział 
+				danych przestrzennych przedstawia Rys. 1.</p>
+			<div class="rys"><img src="rys1.jpg"></div>
+			<p class="podpis">Rys. 1. Podział danych zasilających systemy informacji przestrzennej</p>
+			<hr />
+			<h2 class="naglowek">Składniki systemów GIS</h2>
+			<p class="akapit">Mimo, że początkowo GIS obejmował tylko oprogramowanie do tworzenia map, to współcześnie systemy 
+				informacji geograficznej składają się z danych, oprogramowania, sprzętu komputerowego, ludzi, a także innych elementów.
+				Systemy informacji przestrzennej są wspierane przez dane przestrzenne pochodzące z wielu źródeł (Rys. 2). 
+				Początkowo GIS bazował głównie na digitalizacji map analogowych, co było procesem żmudnym i czasochłonnym. 
+				Obecnie ilość pozyskiwanej informacji przestrzennej jest znacznie większa głównie dzięki zastosowaniu technik satelitarnych, 
+				fotogrametrycznych i teledetekcyjnych.</p> 
+			<div class="rys"><img src="rys2.jpg" /></div>
+			<p class="podpis">Rys. 2. Źródła danych GIS</p>
+			<hr />
+			<h2 class="naglowek">Modele danych</h2>
+			<p class="akapit">W systemach informacji geograficznej model danych rozumiany jest dwojako  i może odnosić się do: </p>
+			<ul>
+				<li>struktur danych pozwalających na numeryczne przedstawienie świata rzeczywistego,</li>
+				<li>ciągu czynności prowadzących do uzyskania zobrazowania rzeczywistości.</li>
+			</ul>
+			<p class="akapit">Do najpowszechniejszych modeli reprezentujących pierwszą grupę należą wektorowy i rastrowy model danych. 
+				W pierwszym z nich obiekty reprezentowane są przez punkt, linię lub wielobok, a ich położenie zapisane 
+				jest w postaci współrzędnych punktów (węzłów). Pozwala to na dokładne odtworzenie położenia i kształtu 
+				obiektów w przestrzeni. Obiekty zapisane w modelu wektorowym posiadające tą samą geometrię przechowuje 
+				się w strukturach zwanych klasami obiektów (<span class="obce">feature class</span>). Wizualizację modelu rastrowego oraz wektorowego 
+				przedstawia Rys. 3.</p>
+			<div class="rys"><img src="rys3.jpg" /></div>
+			<p class="podpis">Rys. 3. Przykład wizualizacji modelu rastrowego (po lewej) i wektorowego (po prawej)</p>
+			<p class="akapit">Rastrowy model danych służy przede wszystkim do prezentacji  zjawisk ciągłych, ale można w nim zapisać 
+				również obiekty dyskretne: punkty (pojedynczy piksel), linie (ciąg pikseli), wieloboki (grupa pikseli). Każdy z nich 
+				jest jednorodny pod względem opisujących go atrybutów, a ich wielkość w różnych zbiorach danych może być różna.
+				Model rastrowy i wektorowy różnią się od siebie ich wykorzystaniem do konkretnych celów. Z uwagi na to, że przetwarzanie 
+				cyfrowe danych rastrowych odbywa się znacznie efektywniej niż wektorowych, mogą one być stosowane do wykonywania 
+				zaawansowanych działań matematycznych na pikselach. I dlatego do analizowania zjawisk występujących ciągle, 
+				zdecydowanie lepiej nadaje się model rastrowy. 
+				Z kolei dane wektorowe pozwalają na dokładne ukazanie obiektów zgodnie z ich geometrią, 
+				co jest niezbędne przy konieczności dokładnego przedstawienia obiektów takich warstw jak np. 
+				sieci komunikacyjne, uzbrojenia terenu, cieków lub granice obiektów czy niektórych warstw tematycznych.</p>
+		</div>
+		<div id="footer1">
+			<p>Copyright © 2014 Tomasz Krawczyk</p>
+		</div>
+	</body>
+</html>
+
